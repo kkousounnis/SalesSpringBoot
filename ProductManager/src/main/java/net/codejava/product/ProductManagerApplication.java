@@ -1,4 +1,4 @@
-package net.codejava.productmanager;
+package net.codejava.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
