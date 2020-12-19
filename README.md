@@ -1,2 +1,2 @@
 # SalesSpringBoot
-Spring Boot Thymeleaf Jpa Hibernate project of Warehouse products data management systme with Crud
+Spring Boot Thymeleaf Jpa Hibernate project of Sales products data management systme with Crud
