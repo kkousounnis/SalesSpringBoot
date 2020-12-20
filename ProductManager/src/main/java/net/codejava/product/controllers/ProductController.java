@@ -13,45 +13,48 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class ProductController {
-    
+
     @Autowired
     private ProductService service;
-    
+
     @RequestMapping("/")
-    public String viewHomePage(Model model){
-        List<Product> products = service.listAll(); 
-        
+    public String viewHomePage(Model model) {
+        List<Product> products = service.listAll();
+
         System.out.println(products);
         model.addAttribute("products", products);
         return "listproducts";
     }
-    
+
     @RequestMapping("/new")
-    public String showNewProductPage(Model model){
+    public String showNewProductPage(Model model) {
         Product product = new Product();
         model.addAttribute("product", product);
-        
+
         return "newproduct";
     }
-    
+
     @RequestMapping("/save")
-    public String saveProduct(@ModelAttribute("product") Product product){
+    public String saveProduct(@ModelAttribute("product") Product product) {
         service.save(product);
-        
+
         return "redirect:/";
     }
-    
+
     @RequestMapping("/edit/{id}")
-    public ModelAndView showEditProductPage(@PathVariable( name = "id") int id){
+    public ModelAndView showEditProductPage(@PathVariable(name = "id") int id) {
         ModelAndView mav = new ModelAndView("edit_product");
         Product product = service.get(id);
-        
+
         mav.addObject("product", product);
-        
+
         return mav;
     }
-    
-    
-    
+
+    @RequestMapping("/delete/{id}")
+    public String deleteProduct(@PathVariable(name = "id") int id) {
+        service.delete(id);
+        return "redirect:/";
+    }
 
 }
