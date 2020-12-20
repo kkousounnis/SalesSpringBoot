@@ -1,11 +1,14 @@
-package net.codejava.productmanager;
+package net.codejava.product;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class ProductManagerApplicationTests {
 
+
+@SpringBootTest
+class AppMain {
+
+	
 	@Test
 	void contextLoads() {
 	}

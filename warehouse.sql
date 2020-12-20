@@ -9,3 +9,10 @@ CREATE TABLE `products`(
     `price` FLOAT NOT NULL,
     PRIMARY KEY(`id`)
 );
+
+
+INSERT INTO `products`(`name`, `brand`, `madein`, `price`)
+VALUES("Alianware", "Dell", "USA", "2100");
+
+INSERT INTO `products`(`name`, `brand`, `madein`, `price`)
+VALUES("Pc", "Lenovo", "China", "1000");

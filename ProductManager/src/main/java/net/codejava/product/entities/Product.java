@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package net.codejava.product.entities;
 
 import java.io.Serializable;
@@ -17,20 +12,16 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author konstantinos
- */
 @Entity
 @Table(name = "products", catalog = "warehouse", schema = "")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Products.findAll", query = "SELECT p FROM Products p"),
-    @NamedQuery(name = "Products.findById", query = "SELECT p FROM Products p WHERE p.id = :id"),
-    @NamedQuery(name = "Products.findByName", query = "SELECT p FROM Products p WHERE p.name = :name"),
-    @NamedQuery(name = "Products.findByBrand", query = "SELECT p FROM Products p WHERE p.brand = :brand"),
-    @NamedQuery(name = "Products.findByMadein", query = "SELECT p FROM Products p WHERE p.madein = :madein"),
-    @NamedQuery(name = "Products.findByPrice", query = "SELECT p FROM Products p WHERE p.price = :price")})
+//@NamedQueries({
+//    @NamedQuery(name = "Products.findAll", query = "SELECT p FROM Products p"),
+//    @NamedQuery(name = "Products.findById", query = "SELECT p FROM Products p WHERE p.id = :id"),
+//    @NamedQuery(name = "Products.findByName", query = "SELECT p FROM Products p WHERE p.name = :name"),
+//    @NamedQuery(name = "Products.findByBrand", query = "SELECT p FROM Products p WHERE p.brand = :brand"),
+//    @NamedQuery(name = "Products.findByMadein", query = "SELECT p FROM Products p WHERE p.madein = :madein"),
+//    @NamedQuery(name = "Products.findByPrice", query = "SELECT p FROM Products p WHERE p.price = :price")})
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -129,7 +120,16 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "net.codejava.productmanager.entities.Products[ id=" + id + " ]";
+        StringBuilder sb = new StringBuilder();
+        sb.append("Product{id=").append(id);
+        sb.append(", name=").append(name);
+        sb.append(", brand=").append(brand);
+        sb.append(", madein=").append(madein);
+        sb.append(", price=").append(price);
+        sb.append('}');
+        return sb.toString();
     }
+
     
+
 }
