@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body>
+        <h3 th:inline="text">Welcome [[${#httpServletRequest.remoteUser}]]</h3>
         <div align="center">
             <h1>Product List</h1>
             <a href="/new">Create New Product</a>
