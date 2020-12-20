@@ -9,7 +9,7 @@ public interface IProductService {
 
     public void save(Product product);
 
-    public Product get(long id);
+    public Product get(int id);
 
-    public void delete(long id);
+    public void delete(int id);
 }

@@ -25,12 +25,12 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public Product get(long id) {
+    public Product get(int id) {
         return dao.findById(id).get();
     }
 
     @Override
-    public void delete(long id) {
+    public void delete(int id) {
         dao.deleteById(id);
     }
 
