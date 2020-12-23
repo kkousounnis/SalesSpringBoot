@@ -1,5 +1,5 @@
 # SalesSpringBoot
-Spring Boot/Security Thymeleaf Jpa Hibernate project of Sales products data management systme with Crud
+Spring Boot/Security Thymeleaf Jpa Hibernate project of Sales products data management system Create, Read, Update, Delete product.
 
 ## Username: admin
 ## Password: admin
